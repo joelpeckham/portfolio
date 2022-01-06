@@ -7,4 +7,8 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+# HI!
+
+Hello, My name is Joel! I'm a software engineer and a web developer. I'm currently working at [The New York Times](https://www.nytimes.com/).
+
+

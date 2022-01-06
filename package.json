@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-base-blog",
+  "name": "joelpeckham.com",
   "version": "5.0.2",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "description": "A personal portfolio site.",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
@@ -14,9 +14,9 @@
     "url": "git://github.com/11ty/eleventy-base-blog.git"
   },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Joel Peckham",
+    "email": "joelskyler@gmail.com",
+    "url": "https://jpeckham.com/"
   },
   "license": "MIT",
   "bugs": {
