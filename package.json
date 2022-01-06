@@ -4,7 +4,7 @@
   "description": "A personal portfolio site.",
   "scripts": {
     "watch:sass": "npx sass sass:_site/css --watch",
-    "build": "eleventy",
+    "build": "npx sass sass:_site/css && eleventy",
     "watch": "eleventy --watch & npm run watch:sass",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
