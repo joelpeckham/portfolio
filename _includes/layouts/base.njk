@@ -15,7 +15,6 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ '/css/normalize.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/skeleton.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     
     <!-- Code Theme -->
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
@@ -25,6 +24,7 @@
   </head>
   <body>
     <header>
+      <div class="container">
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
@@ -33,16 +33,35 @@
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
-    </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
+      {# {% set navPages = collections.all | eleventyNavigation %}
+      {% macro renderNavListItem(entry) -%}
+      <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      {%- if entry.children.length -%}
+        <ul>
+          {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+        </ul>
+      {%- endif -%}
+      </li>
+      {%- endmacro %}
+
+      <ul>
+      {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+      </ul> #}
+    </div>
+    </header>
+    <div class="container">
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        {{ content | safe }}
+      </main>
+    </div>
 
     <footer>
+    <div class="container">
       The footer is no longer empty.
+      Current page: {{ page.url | url }}
+      </div>
     </footer>
-
-    <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>
