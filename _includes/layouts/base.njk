@@ -6,15 +6,17 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-
-    <!-- Milligram CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    {# Raleway #}
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    {# Hind #}
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,300,600,500,700" rel="stylesheet" type="text/css">
+    {# Font Awesome #}
     <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ '/css/normalize.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/skeleton.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    
     <!-- Code Theme -->
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     
@@ -34,7 +36,6 @@
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
       {{ content | safe }}
     </main>
 

@@ -39,6 +39,8 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n);
   });
 
+  
+
   // Return the smallest number argument
   eleventyConfig.addFilter("min", (...numbers) => {
     return Math.min.apply(null, numbers);
@@ -98,6 +100,10 @@ module.exports = function(eleventyConfig) {
     ui: false,
     ghostMode: false
   });
+
+  eleventyConfig.setBrowserSyncConfig({
+		files: './_site/css/**/*.css'
+	});
 
   return {
     // Control which files Eleventy will process

@@ -3,8 +3,9 @@
   "version": "5.0.2",
   "description": "A personal portfolio site.",
   "scripts": {
+    "watch:sass": "npx sass sass:_site/css --watch",
     "build": "eleventy",
-    "watch": "eleventy --watch",
+    "watch": "eleventy --watch & npm run watch:sass",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
@@ -31,5 +32,8 @@
     "luxon": "^1.26.0",
     "markdown-it": "^12.1.0",
     "markdown-it-anchor": "^8.1.2"
+  },
+  "dependencies": {
+    "sass": "^1.46.0"
   }
 }
